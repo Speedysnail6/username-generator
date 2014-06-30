@@ -1,92 +1,75 @@
 <!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Username Generator by Speedysnail6</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
-  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/Speedysnail6/username-generator">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/Speedysnail6/username-generator/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/Speedysnail6/username-generator/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-  <title>Username-generator</title>
-  <meta name="description" content="Easily generate random usernames">
+    <div class="wrapper">
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-</head>
-
-<body>
-
-  <div class="wrapper">
-    <header>
-      <h1 class="title">Username-generator</h1>
-    </header>
-    <div id="container">
-      <p class="tagline">Easily generate random usernames</p>
-      <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          <a href="https://github.com/Speedysnail6/username-generator/tarball/master" class="download-button tar"><span>Download</span></a>
-          <a href="https://github.com/Speedysnail6/username-generator/zipball/master" class="download-button zip"><span>Download</span></a>
-          <a href="https://github.com/Speedysnail6/username-generator" class="code">View Username-generator on GitHub</a>
+      <section>
+        <div id="title">
+          <h1>Username Generator</h1>
+          <p>Easily generate random usernames</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/Speedysnail6">Speedysnail6</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
         </div>
-        <span class="blc"></span><span class="trc"></span>
-        </div>
-        <article class="markdown-body">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+        <h1>
+<a name="username-generator" class="anchor" href="#username-generator"><span class="octicon octicon-link"></span></a>Username Generator</h1>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<p>Username Generator is a simple PHP file that randomly generates a username. It can be easily accessed by other files as seen in the demo folder. If you point your browser to <code>generate.php</code>, it will generate a username. All the adjectives, nouns, and numbers can be added/removed one-per-line in text files. Sometimes, a username does not contain an adjective, noun, and/or number. This is not a glitch. Special parameters can be sent to <code>generate.php</code> via the URL or <code>$_GET</code>.</p>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<hr><h2>
+<a name="special-parameters" class="anchor" href="#special-parameters"><span class="octicon octicon-link"></span></a>Special Parameters</h2>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<p>If data is sent to <code>generate.php</code> through the URL for example <code>generate.php?prefix=xx_</code> or by sending it directly through a form with the method <code>$_GET</code>. The current parameters are:</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<blockquote>
+<p><strong>prefix</strong> - what's before the username ex (the_awesome_)</p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<p><strong>suffix</strong> - what's after the username ex (_is_me)</p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p><strong>gm</strong> - (generation method) how the username is generated ex (1)</p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<p><em>- Generation Method 1: Adjective, Noun Number</em></p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p><em>- Generation Method 2: Adjective, Noun</em></p>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<p><strong>imporantnouns</strong> - This can currently only be one noun. This could be your name, favorite food, etc. There is a one in three change it will be replaced with the noun section in the generated username ex (firetruck)</p>
+</blockquote>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </article>
-      </div>
+<hr><h2>
+<a name="help-us" class="anchor" href="#help-us"><span class="octicon octicon-link"></span></a>Help us</h2>
+
+<p>Feel free to clone this and make pull requests for any changes you made. We appreciate all help, even if there's only a really small change. If you make lots of pull requests, you become part of the team.</p>
+      </section>
+
     </div>
-    <footer>
-      <div class="owner">
-      <p><a href="https://github.com/Speedysnail6" class="avatar"><img src="https://avatars1.githubusercontent.com/u/1790843?s=60" width="48" height="48"/></a> <a href="https://github.com/Speedysnail6">Speedysnail6</a> maintains <a href="https://github.com/Speedysnail6/username-generator">Username-generator</a></p>
-
-
-      </div>
-      <div class="creds">
-        <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br/>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
-    </footer>
-  </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    <a href="https://github.com/Speedysnail6/username-generator/tarball/master" class="tar">tar</a><a href="https://github.com/Speedysnail6/username-generator/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
-    <p class="name"></p>
-  </div>
-
-  
-</body>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
 </html>
