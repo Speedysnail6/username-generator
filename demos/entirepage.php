@@ -1,8 +1,8 @@
 <?php
-if ($_GET['mk'] == 1) {
+if ($_POST['mk'] == 1) {
 	setcookie('generatedcount', $_COOKIE['generatedcount'] + 1, time()+3600);
 	$locationurl = $_SERVER['HTTP_HOST'] . dirname($_SERVER["REQUEST_URI"]);
-		$final = file_get_contents('http://' . $locationurl . '/generate.php?gm=' . $_GET['gm'] . '&prefix=' . $_GET['prefix'] . '&suffix=' . $_GET['suffix'] . '&importantnouns=' . $_GET['importantnouns']);
+		$final = file_get_contents('http://' . dirname($locationurl) . '/generate.php?gm=' . $_POST['gm'] . '&prefix=' . $_POST['prefix'] . '&suffix=' . $_POST['suffix'] . '&importantnouns=' . $_POST['importantnouns']);
 }
 $usernamecount = $_COOKIE['generatedcount'] + 1;
 ?>
@@ -35,7 +35,7 @@ $usernamecount = $_COOKIE['generatedcount'] + 1;
         <h4 class="modal-title" id="usernameSettingsLabel">Options</h4>
       </div>
       <div class="modal-body">
-<form class="form-horizontal" action="" method="GET" role="form">
+<form class="form-horizontal" action="" method="POST" role="form">
 <div class="row">
 <div class="col-md-7">
   <div class="form-group">
@@ -52,7 +52,7 @@ $usernamecount = $_COOKIE['generatedcount'] + 1;
 <div class="col-md-5">
   <div class="form-group">
     <div class="col-sm-12">
-		<input type="text" class="form-control" placeholder="Important noun" name="importantnouns" value="<?php echo $_GET['importantnouns']; ?>">
+		<input type="text" class="form-control" placeholder="Important noun" name="importantnouns" value="<?php echo $_POST['importantnouns']; ?>">
     </div>
   </div>
   </div>
@@ -62,7 +62,7 @@ $usernamecount = $_COOKIE['generatedcount'] + 1;
   <div class="form-group">
     <label class="col-sm-2 control-label">Prefix</label>
     <div class="col-sm-10">
-		<input type="text" placeholder="_xxX" class="form-control" name="prefix" value="<?php echo $_GET['prefix']; ?>">
+		<input type="text" placeholder="_xxX" class="form-control" name="prefix" value="<?php echo $_POST['prefix']; ?>">
     </div>
   </div>
   </div>
@@ -70,7 +70,7 @@ $usernamecount = $_COOKIE['generatedcount'] + 1;
   <div class="form-group">
     <label class="col-sm-2 control-label">Suffix</label>
     <div class="col-sm-10">
-		<input type="text" placeholder="Xxx_" class="form-control" name="suffix" value="<?php echo $_GET['suffix']; ?>">
+		<input type="text" placeholder="Xxx_" class="form-control" name="suffix" value="<?php echo $_POST['suffix']; ?>">
     </div>
   </div>
   </div>
@@ -86,29 +86,29 @@ $usernamecount = $_COOKIE['generatedcount'] + 1;
 </div><br /><br /><br />
     <div class="container">
     <div class="jumbotron" style="text-align:center;">
-    <form method="GET">
+    <form method="POST">
     <input type="hidden" name="mk" value="1" />
     <?php
-    if ($_GET['gm']) {
-		echo '<input type="hidden" name="gm" value="'. $_GET['gm'] .'" />';
+    if ($_POST['gm']) {
+		echo '<input type="hidden" name="gm" value="'. $_POST['gm'] .'" />';
     }
 	else {
 		echo '<input type="hidden" name="gm" value="1" />';
 	}
-    if ($_GET['suffix']) {
-		echo '<input type="hidden" name="suffix" value="'. $_GET['suffix'] .'" />';
+    if ($_POST['suffix']) {
+		echo '<input type="hidden" name="suffix" value="'. $_POST['suffix'] .'" />';
     }
 	else {
 		echo '<input type="hidden" name="suffix" value="" />';
 	}
-    if ($_GET['prefix']) {
-		echo '<input type="hidden" name="prefix" value="'. $_GET['prefix'] .'" />';
+    if ($_POST['prefix']) {
+		echo '<input type="hidden" name="prefix" value="'. $_POST['prefix'] .'" />';
     }
 	else {
 		echo '<input type="hidden" name="prefix" value="" />';
 	}
-    if ($_GET['importantnouns']) {
-		echo '<input type="hidden" name="importantnouns" value="'. $_GET['importantnouns'] .'" />';
+    if ($_POST['importantnouns']) {
+		echo '<input type="hidden" name="importantnouns" value="'. $_POST['importantnouns'] .'" />';
     }
 	else {
 		echo '<input type="hidden" name="importantnouns" value="" />';
@@ -116,7 +116,7 @@ $usernamecount = $_COOKIE['generatedcount'] + 1;
     ?>
     <h1 style="font-size: 50px;">Username Generator</h1>
     <?php
-    if ($_GET['mk'] == '1') {
+    if ($_POST['mk'] == '1') {
     echo "<p>Your username is...</p>";
     echo '<div style="font-size: 20px;" class="well well-sm">';
     echo $final;
@@ -136,7 +136,7 @@ $usernamecount = $_COOKIE['generatedcount'] + 1;
   </form>
     </div>
 	<div class="row">
-	<?php if ($_GET['mk'] == 1) { ?>
+	<?php if ($_POST['mk'] == 1) { ?>
 		<div class="col-md-4"><p>
 		<?php
 		if ($usernamecount == 1) {
@@ -175,7 +175,7 @@ $usernamecount = $_COOKIE['generatedcount'] + 1;
 	<?php } else {?>
 		<div class="col-md-4"><p>Copyright &copy; <?php echo $_SERVER['HTTP_HOST']; ?>. All rights reserved.</p></div>
 		<div class="col-md-4"><p>This PHP script was developed by <a href="http://speedysnail6.com" title="Speedysnail6">Speedysnail6</a>.</div>
-		<div class="col-md-4">Want to get this app for your website? <a href="http://codecanyon.com/#">Buy it</a></div>
+		<div class="col-md-4">Want to POST this app for your website? <a href="http://codecanyon.com/#">Buy it</a></div>
 	<?php } ?>
 	</div>
     </div>
