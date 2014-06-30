@@ -15,7 +15,9 @@ If data is sent to `generate.php` through the URL for example `generate.php?pref
 > **suffix** - what's after the username ex (_is_me)
 
 > **gm** - (generation method) how the username is generated ex (1)
+
 >*- Generation Method 1: Adjective, Noun Number*
+
 >*- Generation Method 2: Adjective, Noun*
 
 >**imporantnouns** - This can currently only be one noun. This could be your name, favorite food, etc. There is a one in three change it will be replaced with the noun section in the generated username ex (firetruck)
