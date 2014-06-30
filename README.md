@@ -11,10 +11,15 @@ Special Parameters
 If data is sent to `generate.php` through the URL for example `generate.php?prefix=xx_` or by sending it directly through a form with the method `$_GET`. The current parameters are:
 
 > **prefix** - what's before the username ex (the_awesome_)
+
 > **suffix** - what's after the username ex (_is_me)
+
 > **gm** - (generation method) how the username is generated ex (1)
+
 >*- Generation Method 1: Adjective, Noun Number*
+
 >*- Generation Method 2: Adjective, Noun*
+
 >**imporantnouns** - This can currently only be one noun. This could be your name, favorite food, etc. There is a one in three change it will be replaced with the noun section in the generated username ex (firetruck)
 
 
