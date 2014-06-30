@@ -5,6 +5,13 @@ Username Generator is a simple PHP file that randomly generates a username. It c
 
 ----------
 
+Try it out
+----------
+You can see a the current version installed on [my website][1]. Also, it's free to use under the MIT License, so you can use it on your own projects/sites.
+
+
+----------
+
 
 Special Parameters
 ------------------
@@ -29,3 +36,6 @@ If data is sent to `generate.php` through the URL for example `generate.php?pref
 Help us
 ----------------
 Feel free to clone this and make pull requests for any changes you made. We appreciate all help, even if there's only a really small change. If you make lots of pull requests, you become part of the team.
+
+
+  [1]: http://speedysnail6.info/usernames "Username Generator"
