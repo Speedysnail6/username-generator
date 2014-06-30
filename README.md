@@ -1,10 +1,26 @@
-username-generator
+Username Generator
 ==================
+Username Generator is a simple PHP file that randomly generates a username. It can be easily accessed by other files as seen in the demo folder. If you point your browser to `generate.php`, it will generate a username. All the adjectives, nouns, and numbers can be added/removed one-per-line in text files. Sometimes, a username does not contain an adjective, noun, and/or number. This is not a glitch. Special parameters can be sent to `generate.php` via the URL or `$_GET`.
 
-Username Generator is a simple PHP script that randomly generates a username.
 
-The list of nouns, adjectives, and numbers are all in separate text files (one per line) so you can easily edit them.
+----------
 
-There is a demo bootstrap page that uses the script to generate the username.
 
-Also, you can configure options for generating the username from both the demo page, and the script itself via the URL. (generate.php?suffix=hello).
+Special Parameters
+------------------
+If data is sent to `generate.php` through the URL for example `generate.php?prefix=xx_` or by sending it directly through a form with the method `$_GET`. The current parameters are:
+
+> **prefix** - what's before the username ex (the_awesome_)
+> **suffix** - what's after the username ex (_is_me)
+> **gm** - (generation method) how the username is generated ex (1)
+>*- Generation Method 1: Adjective, Noun Number*
+>*- Generation Method 2: Adjective, Noun*
+>**imporantnouns** - This can currently only be one noun. This could be your name, favorite food, etc. There is a one in three change it will be replaced with the noun section in the generated username ex (firetruck)
+
+
+----------
+
+
+Help us
+----------------
+Feel free to clone this and make pull requests for any changes you made. We appreciate all help, even if there's only a really small change. If you make lots of pull requests, you become part of the team.
