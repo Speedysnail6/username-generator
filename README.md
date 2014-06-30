@@ -21,7 +21,7 @@ If data is sent to `generate.php` through the URL for example `generate.php?pref
 
 > **suffix** - what's after the username ex (_is_me)
 
-> **gm** - (generation method) how the username is generated ex (1)
+> **gm** - generation method: how the username is generated ex (1)
 
 >*- Generation Method 1: Adjective, Noun Number*
 
