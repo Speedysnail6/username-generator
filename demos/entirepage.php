@@ -175,7 +175,7 @@ $usernamecount = $_COOKIE['generatedcount'] + 1;
 	<?php } else {?>
 		<div class="col-md-4"><p>Copyright &copy; <?php echo $_SERVER['HTTP_HOST']; ?>. All rights reserved.</p></div>
 		<div class="col-md-4"><p>This PHP script was developed by <a href="http://speedysnail6.com" title="Speedysnail6">Speedysnail6</a>.</div>
-		<div class="col-md-4">Want to POST this app for your website? <a href="http://codecanyon.com/#">Buy it</a></div>
+		<div class="col-md-4">Want to POST this app for your website? <a href="https://github.com/Speedysnail6/username-generator">Download it</a></div>
 	<?php } ?>
 	</div>
     </div>
