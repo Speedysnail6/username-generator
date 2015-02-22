@@ -39,7 +39,7 @@ The username generator is very simple. All you have to do to generate a username
     $username = file_get_contents('generate.php?gm=2');
     echo $username;
 
-And as long as you do a http request to `generate.php` (and maybe include the parameters, you're good to do.
+And as long as you do a http request to `generate.php` (and maybe include some parameters), you're good to do.
 
 Help us
 ----------------
