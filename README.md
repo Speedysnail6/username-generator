@@ -32,6 +32,14 @@ If data is sent to `generate.php` through the URL for example `generate.php?pref
 
 ----------
 
+Making a request
+----------------
+The username generator is very simple. All you have to do to generate a username is to fetch the contents of `generate.php`possibly with parameters above.
+
+    $username = file_get_contents('generate.php?gm=2');
+    echo $username;
+
+And as long as you do a http request to `generate.php` (and maybe include the parameters, you're good to do.
 
 Help us
 ----------------
