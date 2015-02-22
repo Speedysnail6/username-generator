@@ -1,8 +1,7 @@
 <?php
 if ($_POST['mk'] == 1) {
 	setcookie('generatedcount', $_COOKIE['generatedcount'] + 1, time()+3600);
-	$locationurl = $_SERVER['HTTP_HOST'] . dirname($_SERVER["REQUEST_URI"]);
-		$final = file_get_contents('http://' . dirname($locationurl) . '/generate.php?gm=' . $_POST['gm'] . '&prefix=' . $_POST['prefix'] . '&suffix=' . $_POST['suffix'] . '&importantnouns=' . $_POST['importantnouns']);
+	$final = file_get_contents('../generate.php?gm=' . $_POST['gm'] . '&prefix=' . $_POST['prefix'] . '&suffix=' . $_POST['suffix'] . '&importantnouns=' . $_POST['importantnouns']);
 }
 $usernamecount = $_COOKIE['generatedcount'] + 1;
 ?>
