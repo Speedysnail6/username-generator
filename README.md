@@ -15,7 +15,7 @@ You can see a the current version installed on [my website][1]. Also, it's free 
 
 Special Parameters
 ------------------
-If data is sent to `generate.php` through the URL for example `generate.php?prefix=xx_` or by sending it directly through a form with the method `$_GET`. The current parameters are:
+If data is sent to `generate.php` through the URL for example `generate.php?prefix=xx_&gm=2` or by sending it directly through a form with the method `$_GET`. The current parameters are:
 
 > **prefix** - what's before the username ex. (the_awesome_)
 
@@ -38,4 +38,4 @@ Help us
 Feel free to clone this and make pull requests for any changes you made. We appreciate all help, even if there's only a really small change. If you make lots of pull requests, you become part of the team.
 
 
-  [1]: http://speedysnail6.info/usernames "Username Generator"
+  [1]: http://speedysnail6.com/usernames "Username Generator"
